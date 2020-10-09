@@ -10,5 +10,13 @@ require "bittrex"
 # require "pry"
 # Pry.start
 
+require 'yaml'
+creds = YAML.load_file('credentials.yml')
+
+Bittrex.configure do |config|
+  config.api_key = creds["api_key"]
+  config.secret  = creds["secret"]
+end
+
 require "irb"
 IRB.start(__FILE__)

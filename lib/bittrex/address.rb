@@ -1,5 +1,7 @@
 module Bittrex
   class Address
+    extend ClientHelper
+
     def get_all
       client.get 'addresses'
     end
@@ -11,11 +13,5 @@ module Bittrex
     # TODO: provision new address
     # def create
     # end
-
-    private
-
-    def client
-      @client ||= Bittrex.client
-    end
   end
 end

@@ -1,5 +1,7 @@
 module Bittrex
   class Balance
+    extend ClientHelper
+
     # def initialize
     # end
 
@@ -10,12 +12,6 @@ module Bittrex
     # TODO: check that currency exists
     def get(currency)
       client.get "balances/#{currency}"
-    end
-
-    private
-
-    def client
-      @client ||= Bittrex.client
     end
   end
 end

@@ -1,5 +1,7 @@
 module Bittrex
   class Market
+    extend ClientHelper
+
     def get_all
       client.get 'markets'
     end
@@ -30,12 +32,6 @@ module Bittrex
 
     def get_trades(market)
       client.get "markets/#{market}/trades"
-    end
-
-    private
-
-    def client
-      @client ||= Bittrex.client
     end
   end
 end

@@ -2,6 +2,7 @@ require 'faraday'
 require 'digest'
 require 'openssl'
 require 'uri'
+require 'json'
 
 module Bittrex
   class Client
@@ -10,8 +11,10 @@ module Bittrex
     attr_reader :secret, :api_key
 
     def initialize(opts = {})
-      @secret = 'eefbc82f30f44a0da22cba3c00edaa52'
-      @api_key = '66c436ec64e9486b881a35fa7e007685'
+      raise AuthError.new('You must provide API key and Secret') unless opts[:secret] && opts[:api_key]
+
+      @secret = opts[:secret]
+      @api_key = opts[:api_key]
     end
 
     def get(path, params = {})
@@ -31,7 +34,7 @@ module Bittrex
         # req.body = body.to_json
       end
 
-      resp
+      JSON.parse(resp.body)
     end
 
     private
