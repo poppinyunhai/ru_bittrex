@@ -6,6 +6,8 @@ require 'json'
 
 module Bittrex
   class Client
+    include ClientMethods
+
     API_URI = 'https://api.bittrex.com/v3'
 
     attr_reader :secret, :api_key

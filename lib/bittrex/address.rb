@@ -2,16 +2,25 @@ module Bittrex
   class Address
     extend ClientHelper
 
-    def get_all
-      client.get 'addresses'
+    attr_reader :status, :currency, :address, :raw
+
+    def initialize(attrs = {})
+      @status   = attrs["status"]
+      @currency = attrs["currencySymbol"]
+      @address  = attrs["cryptoAddress"]
+      @raw      = attrs
     end
 
-    def get(currency)
-      client.get "addresses/#{currency}"
+    def self.all(params = {})
+      collection _get('addresses', params)
+    end
+
+    def self.get(currency, params = {})
+      new _get("addresses/#{currency}", params)
     end
 
     # TODO: provision new address
-    # def create
+    # def self.create
     # end
   end
 end
