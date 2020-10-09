@@ -20,8 +20,6 @@ module RuBittrex
   autoload :Ticker,        'ru_bittrex/ticker'
 
   class << self
-    attr_accessor :configuration
-
     def configuration
       @configuration ||= Configuration.new
     end
