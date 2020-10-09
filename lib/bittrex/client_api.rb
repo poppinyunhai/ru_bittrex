@@ -1,5 +1,5 @@
 module Bittrex
-  module ClientMethods
+  module ClientApi
 
     ## Accounts
 

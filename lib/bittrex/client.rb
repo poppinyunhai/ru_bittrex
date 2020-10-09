@@ -6,7 +6,7 @@ require 'json'
 
 module Bittrex
   class Client
-    include ClientMethods
+    include ClientApi
 
     API_URI = 'https://api.bittrex.com/v3'
 
