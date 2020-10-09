@@ -1,9 +1,9 @@
-module Bittrex
+module RuBittrex
   module ClientHelper
     private
 
     def client(custom_client = nil)
-      @client = custom_client || Bittrex.client
+      @client = custom_client || RuBittrex.client
     end
 
     def _get(path, params)

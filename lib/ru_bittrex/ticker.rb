@@ -1,4 +1,4 @@
-module Bittrex
+module RuBittrex
   class Ticker
     extend ClientHelper
     include Helpers

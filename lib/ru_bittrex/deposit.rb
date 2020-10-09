@@ -1,4 +1,4 @@
-module Bittrex
+module RuBittrex
   class Deposit
     extend ClientHelper
     include Helpers

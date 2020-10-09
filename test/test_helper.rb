@@ -1,4 +1,4 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-require "bittrex"
+require "ru_bittrex"
 
 require "minitest/autorun"

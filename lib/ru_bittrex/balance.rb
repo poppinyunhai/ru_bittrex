@@ -1,4 +1,4 @@
-module Bittrex
+module RuBittrex
   class Balance
     extend ClientHelper
     include Helpers

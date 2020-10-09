@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bittrex (0.1.0)
+    ru_bittrex (0.1.0)
       faraday
 
 GEM
@@ -17,9 +17,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bittrex!
   minitest (~> 5.0)
   rake (~> 12.0)
+  ru_bittrex!
 
 BUNDLED WITH
    2.1.4

@@ -1,4 +1,4 @@
-module Bittrex
+module RuBittrex
   module ClientApi
 
     ## Accounts

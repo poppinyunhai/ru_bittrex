@@ -1,4 +1,4 @@
-module Bittrex
+module RuBittrex
   class Market
     extend ClientHelper
     include Helpers

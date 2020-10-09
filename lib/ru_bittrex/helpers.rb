@@ -1,6 +1,6 @@
 require 'date'
 
-module Bittrex
+module RuBittrex
   module Helpers
     def extract_timestamp(value)
       return if value.nil? or value.strip.empty?

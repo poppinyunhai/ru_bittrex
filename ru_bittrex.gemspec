@@ -1,21 +1,21 @@
-require_relative 'lib/bittrex/version'
+require_relative 'lib/ru_bittrex/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bittrex"
-  spec.version       = Bittrex::VERSION
+  spec.name          = "ru_bittrex"
+  spec.version       = RuBittrex::VERSION
   spec.authors       = ["david metta"]
   spec.email         = ["davideliemetta@gmail.com"]
 
-  spec.summary       = "bittrex v3 wrapper"
-  spec.description   = "this gem is a wrapper for bittrex v3"
-  spec.homepage      = "https://github.com/davidmetta/bittrex-v3"
+  spec.summary       = "bittrex API wrapper"
+  spec.description   = "this gem is a wrapper for bittrex API"
+  spec.homepage      = "https://github.com/davidmetta/ru_bittrex"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/davidmetta/bittrex-v3"
+  spec.metadata["source_code_uri"] = "https://github.com/davidmetta/ru_bittrex.git"
   # spec.metadata["changelog_uri"] = ""
 
   # Specify which files should be added to the gem when it is released.

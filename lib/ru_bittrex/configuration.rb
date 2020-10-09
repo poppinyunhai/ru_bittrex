@@ -1,4 +1,4 @@
-module Bittrex
+module RuBittrex
   class Configuration
     attr_accessor :api_key, :secret
 

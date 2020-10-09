@@ -1,3 +1,3 @@
-module Bittrex
+module RuBittrex
   VERSION = "0.1.0"
 end

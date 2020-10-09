@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "bittrex"
+require "ru_bittrex"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -13,7 +13,7 @@ require "bittrex"
 require 'yaml'
 creds = YAML.load_file('credentials.yml')
 
-Bittrex.configure do |config|
+RuBittrex.configure do |config|
   config.api_key = creds["api_key"]
   config.secret  = creds["secret"]
 end

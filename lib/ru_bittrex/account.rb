@@ -1,4 +1,4 @@
-module Bittrex
+module RuBittrex
   class Account
     extend ClientHelper
 

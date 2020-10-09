@@ -4,7 +4,7 @@ require 'openssl'
 require 'uri'
 require 'json'
 
-module Bittrex
+module RuBittrex
   class Client
     include ClientApi
 
