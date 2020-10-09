@@ -4,6 +4,7 @@ module Bittrex
   class Error < StandardError; end
   class AuthError < Error; end
 
+  autoload :Helpers, 'bittrex/helpers'
   autoload :Configuration, 'bittrex/configuration'
   autoload :ClientHelper, 'bittrex/client_helper'
   autoload :Client,   'bittrex/client'

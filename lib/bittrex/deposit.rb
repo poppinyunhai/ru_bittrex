@@ -1,6 +1,7 @@
 module Bittrex
   class Deposit
     extend ClientHelper
+    include Helpers
 
     attr_reader :id, :currency, :quantity, :address, :address_tag,
                 :txid, :confirmations, :updated_at, :completed_at,
@@ -14,28 +15,23 @@ module Bittrex
       @address_tag   = attrs["cryptoAddressTag"]
       @txid          = attrs["txId"]
       @confirmations = attrs["confirmations"]
-      @updated_at    = attrs["updatedAt"]
-      @completed_at  = attrs["completedAt"]
+      @updated_at    = extract_timestamp(attrs["updatedAt"])
+      @completed_at  = extract_timestamp(attrs["completedAt"])
       @status        = attrs["status"]
       @source        = attrs["source"]
       @raw           = attrs
     end
 
     def self.closed(params = {})
-      c = params.delete(:client)
-      client(c).get('deposits/closed', params).map { |data| new(data) }
+      collection _get('deposits/closed', params)
     end
 
-    # def get_open(params = {})
-    #   client.get 'deposits/open', params
-    # end
+    def self.open(params = {})
+      collection _get('deposits/open', params)
+    end
 
-    # def get_closed(params = {})
-    #   client.get 'deposits/closed', params
-    # end
-
-    # def get(id)
-    #   client.get "deposits/#{id}"
-    # end
+    def self.get(id, params = {})
+      new _get("deposits/#{id}", params)
+    end
   end
 end
