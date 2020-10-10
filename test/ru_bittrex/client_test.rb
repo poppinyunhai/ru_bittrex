@@ -31,5 +31,15 @@ module RuBittrex
       assert_equal api_key, client.api_key
       assert_equal secret, client.secret
     end
+
+    def reset_client
+      RuBittrex.reset_client
+
+      client = RuBittrex.client
+      assert_equal client, RuBittrex.instance_variable_get("@client")
+
+      RuBittrex.reset_client
+      assert_nil RuBittrex.instance_variable_get("@client")
+    end
   end
 end

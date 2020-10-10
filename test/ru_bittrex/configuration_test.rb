@@ -33,5 +33,29 @@ module RuBittrex
       auth = { api_key: api_key, secret: secret }
       assert_equal auth, config.auth
     end
+
+    def test_reset_config
+      RuBittrex.reset_config
+
+      api_key = '12345'
+      secret = '6789'
+
+      RuBittrex.configure do |config|
+        config.api_key = api_key
+        config.secret  = secret
+      end
+
+      config = RuBittrex.configuration
+      assert_instance_of RuBittrex::Configuration, config
+
+      assert_equal api_key, config.api_key
+      assert_equal secret, config.secret
+
+      RuBittrex.reset_config
+      resetted = RuBittrex.configuration
+
+      assert_nil resetted.api_key
+      assert_nil resetted.secret
+    end
   end
 end

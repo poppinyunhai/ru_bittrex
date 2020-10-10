@@ -3,7 +3,7 @@ module RuBittrex
     private
 
     def client(custom_client = nil)
-      @client = custom_client || RuBittrex.client
+      custom_client || RuBittrex.client
     end
 
     def _get(path, params)
