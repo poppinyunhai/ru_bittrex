@@ -10,6 +10,7 @@ GEM
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     minitest (5.14.2)
+    mocha (1.11.2)
     multipart-post (2.1.1)
     rake (12.3.3)
 
@@ -18,6 +19,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest (~> 5.0)
+  mocha
   rake (~> 12.0)
   ru_bittrex!
 

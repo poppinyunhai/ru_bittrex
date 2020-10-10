@@ -22,7 +22,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In Order to use RuBittrex you must add auth configuration after requiring the gem, or in an initializer.
+```ruby
+RuBittrex.configure do |config|
+  config.api_key = "api_key"
+  config.secret  = "secret"
+end
+```
+
+Once configured you can use any of the classes like by calling class methods directly:
+```ruby
+RuBittrex::Currency.get('btc')
+```
+The code above returns an instance of `RuBittrex::Currency`
+
+Alternatively you can instantiate the client directly, and then call the methods from there.
+```ruby
+client = RuBittrex::Client.new(api_key: 'api_key', secret: 'secret')
+client.currency('btc')
+```
+
+this is especially useful when needing to perform actions from multiple clients, or multiple accounts.
+
+you can find the full documentation for the Bittrex API [here](https://bittrex.github.io/api/v3)
 
 ## Development
 
