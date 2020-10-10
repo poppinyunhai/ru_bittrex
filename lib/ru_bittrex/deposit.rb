@@ -4,7 +4,7 @@ module RuBittrex
     include Helpers
 
     attr_reader :id, :currency, :quantity, :address, :address_tag,
-                :txid, :confirmations, :updated_at, :completed_at,
+                :tx_id, :confirmations, :updated_at, :completed_at,
                 :status, :source, :raw
 
     def initialize(attrs = {})
@@ -13,7 +13,7 @@ module RuBittrex
       @quantity      = attrs["quantity"]
       @address       = attrs["cryptoAddress"]
       @address_tag   = attrs["cryptoAddressTag"]
-      @txid          = attrs["txId"]
+      @tx_id         = attrs["txId"]
       @confirmations = attrs["confirmations"]
       @updated_at    = extract_timestamp(attrs["updatedAt"])
       @completed_at  = extract_timestamp(attrs["completedAt"])

@@ -1,0 +1,13 @@
+{
+  "id": "rf3fr-r3fr45w-fry55-g54wr",
+  "currencySymbol": "BTC",
+  "quantity": "1.3345",
+  "cryptoAddress": "35243tg57hh7yre53e5wt35at5",
+  "cryptoAddressTag": "",
+  "txId": "sfawrg67u85a4tt3w6uw",
+  "confirmations": "30",
+  "updatedAt": "2018-08-10T00:00:00Z",
+  "completedAt": "2018-08-10T00:00:00Z",
+  "status": "COMPLETED",
+  "source": "BLOCKCHAIN"
+}

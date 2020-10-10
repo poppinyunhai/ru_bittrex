@@ -24,9 +24,9 @@ module RuBittrex
       @configuration ||= Configuration.new
     end
 
-    # def reset
-    #   @configuration = Configuration.new
-    # end
+    def reset_config
+      @configuration = Configuration.new
+    end
 
     def configure
       yield(configuration)
@@ -34,6 +34,14 @@ module RuBittrex
 
     def client
       @client ||= Client.new(configuration.auth)
+    end
+
+    def reset_client
+      @client = nil
+    end
+
+    def root
+      File.expand_path('../..', __FILE__)
     end
   end
 end

@@ -1,0 +1,13 @@
+{
+  "symbol": "BTC",
+  "name": "Bitcoin",
+  "coinType": "BITCOIN",
+  "status": "ONLINE",
+  "minConfirmations": "10",
+  "notice": "example notice",
+  "txFee": "0.005",
+  "logoUrl": "https://example.com/bitcoin.png",
+  "prohibitedIn": ["US"],
+  "baseAddress": "sfw35y4eer6eyhegsye",
+  "associatedTermsOfService": []
+}

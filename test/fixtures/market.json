@@ -1,0 +1,12 @@
+{
+  "symbol": "BCH-ETH",
+  "baseCurrencySymbol": "BCH",
+  "quoteCurrencySymbol": "ETH",
+  "minTradeSize": "0.004",
+  "precision": "10",
+  "status": "ONLINE",
+  "createdAt": "2018-08-10T00:00:00Z",
+  "notice": "example notice",
+  "prohibitedIn": ["US"],
+  "associatedTermsOfService": []
+}
