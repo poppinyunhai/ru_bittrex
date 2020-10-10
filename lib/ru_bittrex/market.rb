@@ -4,7 +4,7 @@ module RuBittrex
     include Helpers
 
     attr_reader :symbol, :base_currency, :quote_currency, :min_trade, :precision,
-                :status, :created_at, :notice, :prohibited_in, :terms_of_service
+                :status, :created_at, :notice, :prohibited_in, :terms_of_service, :raw
     alias_method :terms, :terms_of_service
 
     def initialize(attrs = {})

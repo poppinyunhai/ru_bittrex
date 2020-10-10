@@ -3,7 +3,7 @@ module RuBittrex
     extend ClientHelper
 
     attr_reader :symbol, :name, :coin_type, :status, :min_confirmations, :notice,
-                :tx_fee, :logo_url, :prohibited_in, :address, :terms_of_service
+                :tx_fee, :logo_url, :prohibited_in, :address, :terms_of_service, :raw
     alias_method :terms, :terms_of_service
 
     def initialize(attrs = {})
